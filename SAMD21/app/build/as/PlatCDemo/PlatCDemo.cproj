@@ -284,6 +284,14 @@
       <SubType>compile</SubType>
       <Link>source\bsp\mpu9250\mpu9250_regs.h</Link>
     </Compile>
+    <Compile Include="..\..\..\..\third-party\asf3.46.0\devices\sam0\samd21\startup\startup_samd21.c">
+      <SubType>compile</SubType>
+      <Link>third-party\asf\devices\samd21\startup\startup_samd21.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\third-party\asf3.46.0\devices\sam0\samd21\system_samd21.c">
+      <SubType>compile</SubType>
+      <Link>third-party\asf\devices\samd21\system_samd21.c</Link>
+    </Compile>
     <Compile Include="..\..\..\..\third-party\asf3.46.0\drivers\sam0\adc\adc.h">
       <SubType>compile</SubType>
       <Link>third-party\asf\drivers\adc\adc.h</Link>
@@ -492,10 +500,6 @@
       <SubType>compile</SubType>
       <Link>source\app\platC\platC.h</Link>
     </Compile>
-    <Compile Include="third-party\asf\devices\samd21\startup\startup_samd21.c">
-      <SubType>compile</SubType>
-      <Link>third-party\asf\devices\samd21\startup\startup_samd21.c</Link>
-    </Compile>
     <Compile Include="..\..\..\..\third-party\rkh\source\fwk\inc\rkh.h">
       <SubType>compile</SubType>
       <Link>third-party\rkh\include\rkh.h</Link>
@@ -687,10 +691,6 @@
     <Compile Include="..\..\..\rkhcfg.h">
       <SubType>compile</SubType>
       <Link>source\app\rkhcfg.h</Link>
-    </Compile>
-    <Compile Include="third-party\asf\devices\samd21\system_samd21.c">
-      <SubType>compile</SubType>
-      <Link>third-party\asf\devices\samd21\system_samd21.c</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
