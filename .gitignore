@@ -1,0 +1,5 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SAMD21/app/build/as/PlatCDemo/source/bsp/MPU9250/mpu9250.c
