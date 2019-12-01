@@ -51,6 +51,7 @@
 
 /* ----------------------------- Include files ----------------------------- */
 #include "rkh.h"
+#include "bgm113_cmds_parser.h"
 
 /* ---------------------- External C language linkage ---------------------- */
 #ifdef __cplusplus

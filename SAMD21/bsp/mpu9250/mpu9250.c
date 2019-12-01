@@ -63,7 +63,8 @@
  #define LONG_WAIT_DELAY_MS					100
  #define MPU_9250_WHO_I_AM_EXPECTED_VALUE_1	0x71
  #define MPU_9250_WHO_I_AM_EXPECTED_VALUE_2	0x73
- #define AK8963_WHO_I_AM_EXPECTED_VALUE		0x48
+ #define AK8963_WHO_I_AM_EXPECTED_VALUE_1	0x48
+ #define AK8963_WHO_I_AM_EXPECTED_VALUE_2	0x00
 
  /* ---------------------------- Local data types --------------------------- */
  /* Control structure for MPU9250 operation (only one IMU per project) */
@@ -150,7 +151,7 @@
  /* MPU g_control structure */
  static MPU9250_control_t g_control = 
  {
-	.address = MPU9250_ADDRESS_0
+	.address = MPU9250_ADDRESS_1
  };
 
  /* ----------------------- Local function prototypes ----------------------- */
@@ -295,18 +296,6 @@
 
 	return true;
 }
- static rbool_t mpu9250WhoAmIAK8963(rui8_t *val)
-{
-	/* Read the WHO AM I register */
-	if(!mpu9250ReadAK8963Registers(MPU9250_AK8963_WHO_AM_I, 1))
-		return false;
-
-	/* Return the register value */
-	if(val)
-		*val = g_control._buffer[0];
-	
-	return true;
-}
  static rbool_t mpu9250SetGyroRange(MPU9250_GyroRange_t range)
 {
 	switch(range) 
@@ -438,61 +427,6 @@
 	g_control._bandwidth = bandwidth;
 	return true;
 }
- static rbool_t mpu9250SetSrd(rui8_t srd)
-{
-	/* Setting the sample rate divider to 19 to facilitate setting up magnetometer */
-    
-	// Setting the sample rate divider
-	if(!mpu9250WriteRegister(MPU9250_SMPDIV, 19))
-		return false;
-	
-	if(srd > 9) 
-	{
-		// Set AK8963 to Power Down
-		if(!mpu9250WriteAK8963Register(MPU9250_AK8963_CNTL1, MPU9250_AK8963_PWR_DOWN))
-			return false;
-
-		/* Long wait between AK8963 mode changes */
-		delay_ms(LONG_WAIT_DELAY_MS); 
-		
-		// Set AK8963 to 16 bit resolution, 8 Hz update rate 
-		if(!mpu9250WriteAK8963Register(MPU9250_AK8963_CNTL1, MPU9250_AK8963_CNT_MEAS1))
-			return false;
-
-		// Long wait between AK8963 mode changes
-		delay_ms(LONG_WAIT_DELAY_MS); 
-		
-		// Instruct the MPU9250 to get 7 bytes of data from the AK8963 at the sample rate
-		mpu9250ReadAK8963Registers(MPU9250_AK8963_HXL, 7);
-	} 
-	else 
-	{
-		// Set AK8963 to Power Down
-		if(!mpu9250WriteAK8963Register(MPU9250_AK8963_CNTL1, MPU9250_AK8963_PWR_DOWN))
-			return false;
-
-		// Long wait between AK8963 mode changes
-		delay_ms(LONG_WAIT_DELAY_MS); 
-		
-		// Set AK8963 to 16 bit resolution, 100 Hz update rate
-		if(!mpu9250WriteAK8963Register(MPU9250_AK8963_CNTL1, MPU9250_AK8963_CNT_MEAS2))
-			return false;
-
-		// Long wait between AK8963 mode changes
-		delay_ms(LONG_WAIT_DELAY_MS); 
-		
-		// Instruct the MPU9250 to get 7 bytes of data from the AK8963 at the sample rate
-		mpu9250ReadAK8963Registers(MPU9250_AK8963_HXL, 7);
-	}
-
-	/* Setting the sample rate divider */
-	if(!mpu9250WriteRegister(MPU9250_SMPDIV, srd))
-		return false;
-		
-	g_control._srd = srd;
-	
-	return true;
-}
  static rbool_t mpu9250Read(void)
 {
 	/* Grab the data from the MPU9250 */
@@ -534,10 +468,7 @@
 	if(!mpu9250SetDlpfBandwidth(MPU9250_DLPF_BANDWIDTH_20HZ))
 		return false;
 
-	if(!mpu9250SetSrd(19))
-		return false;
-
-	// take samples and find bias
+	/* Take samples and find bias */
 	g_control._gxbD = 0;
 	g_control._gybD = 0;
 	g_control._gzbD = 0;
@@ -555,14 +486,11 @@
 	g_control._gyb = (float) g_control._gybD;
 	g_control._gzb = (float) g_control._gzbD;
 
-	// Set the range, bandwidth, and srd back to what they were
+	/* Set the range, bandwidth, and srd back to what they were */
 	if(!mpu9250SetGyroRange(g_control._gyroRange))
 		return false;
 
 	if(!mpu9250SetDlpfBandwidth(g_control._bandwidth))
-		return false;
-
-	if(!mpu9250SetSrd(g_control._srd))
 		return false;
 
 	return true;
@@ -590,19 +518,6 @@
 	if(!mpu9250WriteAK8963Register(MPU9250_AK8963_CNTL1, MPU9250_AK8963_PWR_DOWN))
 		return false;
  
-	/* Reset the MPU9250 */
-	mpu9250WriteRegister(MPU9250_PWR_MGMNT_1, MPU9250_PWR_RESET);
- 
-	/* Wait for MPU-9250 to come back up */
-	delay_ms(LONG_WAIT_DELAY_MS);
-
-	/* Reset the AK8963 */
-	mpu9250WriteAK8963Register(MPU9250_AK8963_CNTL2, MPU9250_AK8963_RESET);
-
-	/* Select clock source to gyro */
-	if(!mpu9250WriteRegister(MPU9250_PWR_MGMNT_1, MPU9250_CLOCK_SEL_PLL))
-		return false;
- 
 	/* Check the WHO AM I byte, expected value is 0x71 (decimal 113) or 0x73 (decimal 115) */
 	if(!mpu9250WhoAmI(&val))
 		return false;
@@ -614,21 +529,21 @@
 	if(!mpu9250WriteRegister(MPU9250_PWR_MGMNT_2, MPU9250_SEN_ENABLE))
 		return false;
 
-	/* Setting accel range to 16G as default */
-	if(!mpu9250WriteRegister(MPU9250_ACCEL_CONFIG, MPU9250_ACCEL_FS_SEL_16G))
+	/* Setting accel range to 2G as default */
+	if(!mpu9250WriteRegister(MPU9250_ACCEL_CONFIG, MPU9250_ACCEL_FS_SEL_2G))
 		return false;
 
-	/* Setting the accel scale to 16 */
-	g_control._accelScale = MPU9250_G * 16.0f / 32767.5f;
-	g_control._accelRange = MPU9250_ACCEL_RANGE_16G;
+	/* Setting the accel scale to 2 */
+	g_control._accelScale = MPU9250_G * 2.0f / 32767.5f;
+	g_control._accelRange = MPU9250_ACCEL_RANGE_2G;
  
-	/* Setting the gyro range to 2000DPS as default */
-	if(!mpu9250WriteRegister(MPU9250_GYRO_CONFIG, MPU9250_GYRO_FS_SEL_2000DPS))
+	/* Setting the gyro range to 250DPS as default */
+	if(!mpu9250WriteRegister(MPU9250_GYRO_CONFIG, MPU9250_GYRO_FS_SEL_250DPS))
 		return false;
  
-	/* Setting the gyro scale to 2000DPS */
-	g_control._gyroScale = 2000.0f / 32767.5f * MPU9250_D2R;
-	g_control._gyroRange = MPU9250_GYRO_RANGE_2000DPS;
+	/* Setting the gyro scale to 250DPS */
+	g_control._gyroScale = 250.0f / 32767.5f * MPU9250_D2R;
+	g_control._gyroRange = MPU9250_GYRO_RANGE_250DPS;
  
 	/* Setting bandwidth to 184Hz as default */
 	if(!mpu9250WriteRegister(MPU9250_ACCEL_CONFIG2, MPU9250_ACCEL_DLPF_184))
@@ -642,66 +557,13 @@
  
 	/* Setting the sample rate divider to 0 as default */
 	if(!mpu9250WriteRegister(MPU9250_SMPDIV, 0x00))
+		return false;
 
 	g_control._srd = 0;
  
-	/* Enable I2C master mode */
-	if(!mpu9250WriteRegister(MPU9250_USER_CTRL, MPU9250_I2C_MST_EN))
-		return false;
-
 	/* Set the I2C bus speed to 400 kHz */
 	if(!mpu9250WriteRegister(MPU9250_I2C_MST_CTRL, MPU9250_I2C_MST_CLK))
 		return false;
-
-	/* Check AK8963 WHO AM I register, expected value is 0x48 (decimal 72) */
-	if(!mpu9250WhoAmIAK8963(&val))
-		return false;
-
-	if(AK8963_WHO_I_AM_EXPECTED_VALUE != val)
-		return false;
-
-	/* Get the magnetometer calibration */
-	/* Set AK8963 to Power Down */
-	if(!mpu9250WriteAK8963Register(MPU9250_AK8963_CNTL1, MPU9250_AK8963_PWR_DOWN))
-		return false;
-
-	/* Long wait between AK8963 mode changes */
-	delay_ms(LONG_WAIT_DELAY_MS);
- 
-	/* Set AK8963 to FUSE ROM access */
-	if(!mpu9250WriteAK8963Register(MPU9250_AK8963_CNTL1, MPU9250_AK8963_FUSE_ROM))
-		return false;
-
-	/* Long wait between AK8963 mode changes */
-	delay_ms(LONG_WAIT_DELAY_MS);
-
-	/* Read the AK8963 ASA registers and compute magnetometer scale factors */
-	mpu9250ReadAK8963Registers(MPU9250_AK8963_ASA, 3);
- 
-	g_control._magScaleX = ((((float) g_control._buffer[0]) - 128.0f) / (256.0f) + 1.0f) * 4912.0f / 32760.0f; // micro Tesla
-	g_control._magScaleY = ((((float) g_control._buffer[1]) - 128.0f) / (256.0f) + 1.0f) * 4912.0f / 32760.0f; // micro Tesla
-	g_control._magScaleZ = ((((float) g_control._buffer[2]) - 128.0f) / (256.0f) + 1.0f) * 4912.0f / 32760.0f; // micro Tesla
- 
-	/* Set AK8963 to Power Down */
-	if(!mpu9250WriteAK8963Register(MPU9250_AK8963_CNTL1, MPU9250_AK8963_PWR_DOWN))
-		return false;
- 
-	/* Long wait between AK8963 mode changes */
-	delay_ms(LONG_WAIT_DELAY_MS);
- 
-	/* Set AK8963 to 16 bit resolution, 100 Hz update rate */
-	if(!mpu9250WriteAK8963Register(MPU9250_AK8963_CNTL1, MPU9250_AK8963_CNT_MEAS2))
-		return false;
-
-	/* Long wait between AK8963 mode changes */
-	delay_ms(LONG_WAIT_DELAY_MS);
- 
-	/* Select clock source to gyro */
-	if(!mpu9250WriteRegister(MPU9250_PWR_MGMNT_1, MPU9250_CLOCK_SEL_PLL))
-		return false;
-
-	/* Instruct the MPU9250 to get 7 bytes of data from the AK8963 at the sample rate */
-	mpu9250ReadAK8963Registers(MPU9250_AK8963_HXL, 7);
 
 	/* Estimate gyro bias */
 	if(!mpu9250CalibrateGyro())
@@ -797,16 +659,17 @@
 	 i2c_master_enable(&g_i2cHandler);
 
 	 /* Set basic configuration */
-	 if(!mpu9250Begin())
+	if(!mpu9250Begin())
 		return false;
 
 	 /* Configure external interrupt */
 	 extint_chan_get_config_defaults(&extint_config);
 
-	 extint_config.gpio_pin           = EXT_WAKE_UP_IRQ_PIN;
-	 extint_config.gpio_pin_mux       = EXT_WAKE_UP_IRQ_MUX;
-	 extint_config.gpio_pin_pull      = EXTINT_PULL_NONE;
-	 extint_config.detection_criteria = EXTINT_DETECT_FALLING;
+	 extint_config.gpio_pin            = EXT_WAKE_UP_IRQ_PIN;
+	 extint_config.gpio_pin_mux        = EXT_WAKE_UP_IRQ_MUX;
+	 extint_config.gpio_pin_pull       = EXTINT_PULL_NONE;
+	 extint_config.detection_criteria  = EXTINT_DETECT_FALLING;
+	 extint_config.filter_input_signal = true;
 
 	 extint_chan_set_config(EXT_WAKE_UP_IRQ_LINE, &extint_config);
 

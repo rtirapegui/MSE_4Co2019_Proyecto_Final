@@ -131,24 +131,24 @@
 					<SourcePath></SourcePath>
 				</d4p1:anyType>
 				<d4p1:anyType i:type="FileInfo">
-					<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.304\samd21a\gcc\gcc\samd21j18a_flash.ld</AbsolutePath>
+					<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.304\samd21a\gcc\gcc\samd21e17a_flash.ld</AbsolutePath>
 					<Attribute>config</Attribute>
 					<Category>linkerScript</Category>
 					<Condition>GCC Exe</Condition>
-					<FileContentHash>OPHuaTs/jUfTRcBNegNOZg==</FileContentHash>
+					<FileContentHash>qdILMB6dGWizfG+NjlAbbA==</FileContentHash>
 					<FileVersion></FileVersion>
-					<Name>samd21a/gcc/gcc/samd21j18a_flash.ld</Name>
+					<Name>samd21a/gcc/gcc/samd21e17a_flash.ld</Name>
 					<SelectString></SelectString>
 					<SourcePath></SourcePath>
 				</d4p1:anyType>
 				<d4p1:anyType i:type="FileInfo">
-					<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.304\samd21a\gcc\gcc\samd21j18a_sram.ld</AbsolutePath>
+					<AbsolutePath>C:/Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\SAMD21_DFP\1.3.304\samd21a\gcc\gcc\samd21e17a_sram.ld</AbsolutePath>
 					<Attribute>config</Attribute>
 					<Category>other</Category>
 					<Condition>GCC Exe</Condition>
-					<FileContentHash>b2DINim/KCXjF+uFxnw75Q==</FileContentHash>
+					<FileContentHash>o5EqU+PLUQyCBZUmsKuqyA==</FileContentHash>
 					<FileVersion></FileVersion>
-					<Name>samd21a/gcc/gcc/samd21j18a_sram.ld</Name>
+					<Name>samd21a/gcc/gcc/samd21e17a_sram.ld</Name>
 					<SelectString></SelectString>
 					<SourcePath></SourcePath>
 				</d4p1:anyType>
@@ -157,7 +157,7 @@
 			<PackPath>C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/SAMD21_DFP/1.3.304/Atmel.SAMD21_DFP.pdsc</PackPath>
 			<PackVersion>1.3.304</PackVersion>
 			<PresentInProject>true</PresentInProject>
-			<ReferenceConditionId>ATSAMD21J18A</ReferenceConditionId>
+			<ReferenceConditionId>ATSAMD21E17A</ReferenceConditionId>
 			<RteComponents xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
 				<d4p1:string></d4p1:string>
 			</RteComponents>

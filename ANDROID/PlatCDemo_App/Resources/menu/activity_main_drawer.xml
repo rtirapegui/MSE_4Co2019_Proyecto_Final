@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/home"
+            android:title="Fitness" />
+        <item
+            android:id="@+id/chart"
+            android:icon="@drawable/chart"
+            android:title="Gráficos" />
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/settings"
+            android:title="Ajustes" />
+        <item
+            android:id="@+id/information"
+            android:icon="@drawable/info"
+            android:title="Acerca de" />
+        <item/>
+        <item/> 
+        <item/>
+        <item 
+            android:title="@string/app_version" />
+    </group>
+
+    
+
+</menu>

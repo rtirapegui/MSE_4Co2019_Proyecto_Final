@@ -32,7 +32,7 @@
  *  \file       platC.h
  *  \brief      PlatC SMA Header for PlatC Demo.
  *
- *  \ingroup    bsp
+ *  \ingroup    app
  */
 
 /* -------------------------- Development history -------------------------- */
@@ -50,6 +50,9 @@
 #define _PLAT_C_H_
 
 /* ----------------------------- Include files ----------------------------- */
+#include "conf_app.h"
+
+#include "bsp.h"
 
 /* ---------------------- External C language linkage ---------------------- */
 #ifdef __cplusplus
@@ -58,12 +61,11 @@ extern "C" {
 
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
+
 /* -------------------------------- Signals -------------------------------- */
 typedef enum
 {
 	evInitTout,
-	evCmdTout,
-	evFailureToggle,
 	evConnStatusTout,
 	evUnlikedTout,
 	evMotionIndicatorTout,
@@ -78,8 +80,9 @@ typedef enum
 	evForceDisconnect,
 	evMotionDetect,
 	evPlatCCfg,
-	evSporaGetCfg,
+	evPlatCGetCfg,
 	evPlatCGetData,
+	evPlatCFitness,
 	evBatteryChargerConnected,
 	evBatteryChargerDisconnected,
 
@@ -92,6 +95,64 @@ typedef enum
 RKH_SMA_DCLR(platC);
 
 /* ------------------------------- Data types ------------------------------ */
+typedef struct
+{
+	/* Data buffer */
+	float ax_mean;
+	float ax_var;
+	float ax_min;
+	float ax_max;
+	float ay_mean;
+	float ay_var;
+	float ay_min;
+	float ay_max;
+	float az_mean;
+	float az_var;
+	float az_min;
+	float az_max;
+} MPU9250_samplerData_t;
+
+struct platC_sampler_packet
+{
+	MPU9250_samplerData_t values;
+	rui32_t time;
+};
+
+struct platC_packet
+{
+	MPU9250_data_t values;
+	rui32_t time;
+};
+
+struct platC_config
+{
+	rui16_t motionThr;
+	rbool_t buzzerEn;
+	rui8_t advName[ADVERTISE_NAME_SIZE_MAX+1];
+};
+
+struct platC_fitness
+{
+	rbool_t fitnessFlag;
+};
+
+typedef struct 
+{
+	RKH_EVT_T e;
+	struct platC_packet data;
+} evt_motion_t;
+
+typedef struct
+{
+	RKH_EVT_T e;
+	struct platC_config data;
+} evt_config_t;
+
+typedef struct
+{
+	RKH_EVT_T e;
+	struct platC_fitness data;
+} evt_fitness_t;
 /* -------------------------- External variables --------------------------- */
 /* -------------------------- Function prototypes -------------------------- */
 /* -------------------- External C language linkage end -------------------- */

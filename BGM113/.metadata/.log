@@ -1,18 +1,844 @@
-!SESSION 2019-07-17 20:16:19.900 -----------------------------------------------
+!SESSION 2019-09-07 18:25:00.781 -----------------------------------------------
 eclipse.buildId=unknown
 java.version=1.8.0_92
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\TFSProjects\MSE\Bimestre 1\Gestion de la tecnologia y la innovacion\Tesis\Firmware\PlatC\BGM113\soc-empty
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\TFSProjects\MSE\Bimestre 1\Gestion de la tecnologia y la innovacion\Tesis\Firmware\PlatC\BGM113
 
-!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-07-17 20:16:39.249
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-07 18:25:10.822
 !MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
 
-!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-07-17 20:16:39.261
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-07 18:25:10.839
 !MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
 
-!ENTRY com.silabs.ss.platform.content.core 4 0 2019-07-17 20:16:57.912
-!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-07 18:25:27.498
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
 
-!ENTRY com.silabs.ss.platform.content.core 4 0 2019-07-17 20:17:18.458
-!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+!ENTRY com.silabs.ss.tool.ide.arm.toolchain.iar 1 0 2019-09-07 18:25:33.561
+!MESSAGE detectIAREWARMFromRegistry: C:/PROGRA~2/IARSYS~1/EMBEDD~1.1
+
+!ENTRY com.silabs.ss.tool.ide.arm.toolchain.iar 1 0 2019-09-07 18:25:33.595
+!MESSAGE trySetupIARARMToolchainPath: C:/PROGRA~2/IARSYS~1/EMBEDD~1.1
+
+!ENTRY com.silabs.ss.tool.ide.arm.toolchain.iar 1 0 2019-09-07 18:25:33.671
+!MESSAGE updateIARPreference: C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\
+
+!ENTRY com.silabs.ss.framework.project.core 4 0 2019-09-07 18:25:33.796
+!MESSAGE cannot create externalProjectType com.silabs.ss.framework.ide.project.core.iarExternalProjectType
+!STACK 0
+java.lang.IllegalArgumentException: Could not load class for attribute 'class'
+	at com.silabs.ss.platform.internal.api.rcp.core.extensions.OSGiExtensionInformation.createExecutableExtension(OSGiExtensionInformation.java:155)
+	at com.silabs.ss.framework.project.internal.core.type.ProjectTypeRegistry.realizeExternalProjectType(ProjectTypeRegistry.java:149)
+	at com.silabs.ss.framework.project.internal.core.type.ProjectTypeRegistry.getAllExternalProjectTypes(ProjectTypeRegistry.java:258)
+	at com.silabs.ss.framework.ide.api.project.ui.wizards.ImportSingleExistingProjectWizard.<init>(ImportSingleExistingProjectWizard.java:93)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:284)
+	at org.eclipse.ui.internal.dialogs.WorkbenchWizardElement.createExecutableExtension(WorkbenchWizardElement.java:123)
+	at org.eclipse.ui.internal.dialogs.WorkbenchWizardElement.createWizard(WorkbenchWizardElement.java:261)
+	at org.eclipse.ui.internal.handlers.WizardHandler.execute(WizardHandler.java:301)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:295)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:252)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:234)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:493)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:486)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:799)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.handleWidgetSelection(HandledContributionItem.java:675)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.access$7(HandledContributionItem.java:659)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem$4.handleEvent(HandledContributionItem.java:592)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: org.eclipse.core.runtime.CoreException: Plug-in com.silabs.ss.framework.project.core was unable to load class com.silabs.ss.framework.project.internal.api.core.external.impl.IARExternalProjectType.
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:194)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:176)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at com.silabs.ss.platform.internal.api.rcp.core.extensions.OSGiExtensionInformation.createExecutableExtension(OSGiExtensionInformation.java:151)
+	... 61 more
+Caused by: java.lang.ClassNotFoundException: com.silabs.ss.framework.project.internal.api.core.external.impl.IARExternalProjectType cannot be found by com.silabs.ss.framework.project.core_5.2.0.201907130211-320
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:439)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	... 65 more
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-07 18:25:41.968
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:25:50.260
+!MESSAGE Unknown board 'BRD4165B' in framework btmesh
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:25:50.273
+!MESSAGE Unknown board 'BRD4171A' in framework btmesh
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:25:50.511
+!MESSAGE Unknown architecture(s) [efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+iar, efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+gcc] in framework btmesh
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:25:52.833
+!MESSAGE Unknown board 'BRD4165B' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:25:52.845
+!MESSAGE Unknown board 'BRD4171A' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:25:52.934
+!MESSAGE Unknown architecture(s) [efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+iar, efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+gcc] in framework ble
+!SESSION 2019-09-07 18:36:15.265 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\TFSProjects\MSE\Bimestre 1\Gestion de la tecnologia y la innovacion\Tesis\Firmware\PlatC\BGM113_
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-07 18:36:27.576
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-07 18:36:27.590
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-07 18:36:33.693
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.framework.project.core 4 0 2019-09-07 18:36:37.947
+!MESSAGE cannot create externalProjectType com.silabs.ss.framework.ide.project.core.iarExternalProjectType
+!STACK 0
+java.lang.IllegalArgumentException: Could not load class for attribute 'class'
+	at com.silabs.ss.platform.internal.api.rcp.core.extensions.OSGiExtensionInformation.createExecutableExtension(OSGiExtensionInformation.java:155)
+	at com.silabs.ss.framework.project.internal.core.type.ProjectTypeRegistry.realizeExternalProjectType(ProjectTypeRegistry.java:149)
+	at com.silabs.ss.framework.project.internal.core.type.ProjectTypeRegistry.getAllExternalProjectTypes(ProjectTypeRegistry.java:258)
+	at com.silabs.ss.framework.ide.api.project.ui.wizards.ImportSingleExistingProjectWizard.<init>(ImportSingleExistingProjectWizard.java:93)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at java.lang.Class.newInstance(Class.java:442)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:284)
+	at org.eclipse.ui.internal.dialogs.WorkbenchWizardElement.createExecutableExtension(WorkbenchWizardElement.java:123)
+	at org.eclipse.ui.internal.dialogs.WorkbenchWizardElement.createWizard(WorkbenchWizardElement.java:261)
+	at org.eclipse.ui.internal.handlers.WizardHandler.execute(WizardHandler.java:301)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:295)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:252)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:234)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:493)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:486)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:799)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.handleWidgetSelection(HandledContributionItem.java:675)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.access$7(HandledContributionItem.java:659)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem$4.handleEvent(HandledContributionItem.java:592)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+Caused by: org.eclipse.core.runtime.CoreException: Plug-in com.silabs.ss.framework.project.core was unable to load class com.silabs.ss.framework.project.internal.api.core.external.impl.IARExternalProjectType.
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:194)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:176)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at com.silabs.ss.platform.internal.api.rcp.core.extensions.OSGiExtensionInformation.createExecutableExtension(OSGiExtensionInformation.java:151)
+	... 61 more
+Caused by: java.lang.ClassNotFoundException: com.silabs.ss.framework.project.internal.api.core.external.impl.IARExternalProjectType cannot be found by com.silabs.ss.framework.project.core_5.2.0.201907130211-320
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:439)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	... 65 more
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-07 18:36:55.273
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:36:57.303
+!MESSAGE Unknown board 'BRD4165B' in framework btmesh
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:36:57.317
+!MESSAGE Unknown board 'BRD4171A' in framework btmesh
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:36:57.536
+!MESSAGE Unknown architecture(s) [efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+iar, efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+gcc] in framework btmesh
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:36:59.462
+!MESSAGE Unknown board 'BRD4165B' in framework btmesh
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:36:59.470
+!MESSAGE Unknown board 'BRD4171A' in framework btmesh
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:36:59.482
+!MESSAGE Unknown architecture(s) [efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+iar, efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+gcc] in framework btmesh
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:36:59.521
+!MESSAGE Unknown board 'BRD4165B' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:36:59.529
+!MESSAGE Unknown board 'BRD4171A' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:36:59.593
+!MESSAGE Unknown architecture(s) [efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+iar, efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+gcc] in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:37:00.676
+!MESSAGE Unknown board 'BRD4165B' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:37:00.685
+!MESSAGE Unknown board 'BRD4171A' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:37:00.696
+!MESSAGE Unknown architecture(s) [efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+iar, efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+gcc] in framework ble
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-09-07 18:37:41.805
+!MESSAGE Indexed 'PlatCDemo' (35 sources, 198 headers) in 13,5 sec: 16.851 declarations; 39.662 references; 5 unresolved inclusions; 157 syntax errors; 118 unresolved names (0,21 %)
+!SESSION 2019-09-07 18:38:20.645 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-07 18:38:33.151
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-07 18:38:33.171
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:38:54.348
+!MESSAGE Unknown board 'BRD4165B' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:38:54.602
+!MESSAGE Unknown board 'BRD4171A' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 18:38:55.230
+!MESSAGE Unknown architecture(s) [efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+iar, efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+gcc] in framework ble
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-07 18:39:00.540
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-07 18:39:20.373
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+!SESSION 2019-09-07 23:21:19.839 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\TFSProjects\MSE\Bimestre 1\Gestion de la tecnologia y la innovacion\Tesis\Firmware\PlatC\BGM113
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-07 23:21:34.232
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-07 23:21:34.326
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-07 23:22:37.670
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:22:39.063
+!MESSAGE Unknown board 'BRD4165B' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:22:39.146
+!MESSAGE Unknown board 'BRD4171A' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:22:40.597
+!MESSAGE Unknown architecture(s) [efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+iar, efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+gcc] in framework ble
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-07 23:23:07.614
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:27:52.231
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app NCP target - Empty
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:27:52.842
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app NCP - Host
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:27:52.866
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app SOC - DTM
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:27:53.022
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Empty - RAIL - DMP
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:27:53.075
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app SOC - Light - RAIL - DMP
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:27:53.100
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app SOC - Range Test - RAIL - DMP
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:27:53.115
+!MESSAGE Unknown architecture(s) [rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Range Test - RAIL - DMP - BLE and IEEE802.15.4
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:27:53.126
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Smart Phone App
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:27:53.169
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Thermometer
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:27:53.199
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Thermometer - Client
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:27:53.234
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Thermometer - RTOS
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-07 23:27:54.339
+!MESSAGE Could not find a quiz yaml file: D:\SiliconLabs\developer\sdks\gecko_sdk_suite\v2.6\app\bluetooth\appbuilder\fwk\meta-inf\quizz.yaml
+
+!ENTRY com.silabs.ss.platform.apack.ip 2 0 2019-09-08 12:24:37.999
+!MESSAGE No network interfaces found.
+!SESSION 2019-09-09 11:31:39.021 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-09 11:32:35.163
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-09 11:32:35.267
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:33:56.763
+!MESSAGE Unknown board 'BRD4165B' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:33:56.771
+!MESSAGE Unknown board 'BRD4171A' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:33:57.032
+!MESSAGE Unknown architecture(s) [efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+iar, efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+gcc] in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:33:59.972
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app NCP target - Empty
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:34:00.540
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app NCP - Host
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:34:00.592
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app SOC - DTM
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:34:00.827
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Empty - RAIL - DMP
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:34:00.914
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app SOC - Light - RAIL - DMP
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:34:00.967
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app SOC - Range Test - RAIL - DMP
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:34:00.999
+!MESSAGE Unknown architecture(s) [rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Range Test - RAIL - DMP - BLE and IEEE802.15.4
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:34:01.009
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Smart Phone App
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:34:01.046
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Thermometer
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:34:01.074
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Thermometer - Client
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:34:01.106
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Thermometer - RTOS
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:34:02.278
+!MESSAGE Could not find a quiz yaml file: D:\SiliconLabs\developer\sdks\gecko_sdk_suite\v2.6\app\bluetooth\appbuilder\fwk\meta-inf\quizz.yaml
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-09 11:34:24.237
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-09 11:35:08.119
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.tool.flashprogrammer.exx32.core 4 0 2019-09-09 11:39:37.052
+!MESSAGE Unlock failed with error code -19 (Device recovery failed.)
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2019-09-09 11:42:01.674
+!MESSAGE exception caught in listener
+!STACK 0
+java.lang.NullPointerException
+	at com.silabs.ss.tool.internal.flashprogrammer.exx32.ui.GroupFactoryFlashOptions.valueChanged(GroupFactoryFlashOptions.java:215)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.events.FPListenerRegistry.lambda$0(FPListenerRegistry.java:21)
+	at com.silabs.java.utils.ListenerList.fire(ListenerList.java:127)
+	at com.silabs.java.utils.ListenerList.fireOrQueue(ListenerList.java:166)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.events.FPListenerRegistry.fireFPValueChanged(FPListenerRegistry.java:21)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.setFile(FlashProgrammerComposite.java:825)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.setFileHistory(FlashProgrammerComposite.java:854)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createFileSection(FlashProgrammerComposite.java:476)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createFlashSection(FlashProgrammerComposite.java:431)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createDefaultSection(FlashProgrammerComposite.java:420)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createContentSections(FlashProgrammerComposite.java:405)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.setDevices(FlashProgrammerComposite.java:1027)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite$2$2.run(FlashProgrammerComposite.java:240)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:827)
+	at org.eclipse.jface.window.Window.open(Window.java:803)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.ProgrammerCommandHandler.execute(ProgrammerCommandHandler.java:27)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:295)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:252)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:234)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:493)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:486)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:799)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.handleWidgetSelection(HandledContributionItem.java:675)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.access$7(HandledContributionItem.java:659)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem$4.handleEvent(HandledContributionItem.java:592)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY com.silabs.ss.tool.flashprogrammer.exx32.core 4 0 2019-09-09 11:45:37.160
+!MESSAGE Unlock failed with error code -19 (Device recovery failed.)
+!SESSION 2019-09-09 11:47:33.936 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-09 11:48:23.045
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-09 11:48:23.060
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:19.232
+!MESSAGE Unknown board 'BRD4165B' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:19.248
+!MESSAGE Unknown board 'BRD4171A' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:19.487
+!MESSAGE Unknown architecture(s) [efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+iar, efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+gcc] in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:22.514
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app NCP target - Empty
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:22.737
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app NCP - Host
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:22.767
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app SOC - DTM
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:22.835
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Empty - RAIL - DMP
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:22.888
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app SOC - Light - RAIL - DMP
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:22.913
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app SOC - Range Test - RAIL - DMP
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:22.933
+!MESSAGE Unknown architecture(s) [rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Range Test - RAIL - DMP - BLE and IEEE802.15.4
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:22.947
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Smart Phone App
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:22.980
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Thermometer
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:23.007
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Thermometer - Client
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:23.040
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Thermometer - RTOS
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 11:49:23.608
+!MESSAGE Could not find a quiz yaml file: D:\SiliconLabs\developer\sdks\gecko_sdk_suite\v2.6\app\bluetooth\appbuilder\fwk\meta-inf\quizz.yaml
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-09 11:49:45.858
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-09 11:50:09.155
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.tool.flashprogrammer.exx32.core 4 0 2019-09-09 11:50:11.028
+!MESSAGE Unlock failed with error code -19 (Device recovery failed.)
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2019-09-09 11:50:28.269
+!MESSAGE exception caught in listener
+!STACK 0
+java.lang.NullPointerException
+	at com.silabs.ss.tool.internal.flashprogrammer.exx32.ui.GroupFactoryFlashOptions.valueChanged(GroupFactoryFlashOptions.java:215)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.events.FPListenerRegistry.lambda$0(FPListenerRegistry.java:21)
+	at com.silabs.java.utils.ListenerList.fire(ListenerList.java:127)
+	at com.silabs.java.utils.ListenerList.fireOrQueue(ListenerList.java:166)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.events.FPListenerRegistry.fireFPValueChanged(FPListenerRegistry.java:21)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.setFile(FlashProgrammerComposite.java:825)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.setFileHistory(FlashProgrammerComposite.java:854)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createFileSection(FlashProgrammerComposite.java:476)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createFlashSection(FlashProgrammerComposite.java:431)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createDefaultSection(FlashProgrammerComposite.java:420)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createContentSections(FlashProgrammerComposite.java:405)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.setDevices(FlashProgrammerComposite.java:1027)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite$2$2.run(FlashProgrammerComposite.java:240)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:827)
+	at org.eclipse.jface.window.Window.open(Window.java:803)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.ProgrammerCommandHandler.execute(ProgrammerCommandHandler.java:27)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:295)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:252)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:234)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:493)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:486)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:799)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.handleWidgetSelection(HandledContributionItem.java:675)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.access$7(HandledContributionItem.java:659)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem$4.handleEvent(HandledContributionItem.java:592)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2019-09-09 11:54:29.229
+!MESSAGE exception caught in listener
+!STACK 0
+java.lang.NullPointerException
+	at com.silabs.ss.tool.internal.flashprogrammer.exx32.ui.GroupFactoryFlashOptions.valueChanged(GroupFactoryFlashOptions.java:215)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.events.FPListenerRegistry.lambda$0(FPListenerRegistry.java:21)
+	at com.silabs.java.utils.ListenerList.fire(ListenerList.java:127)
+	at com.silabs.java.utils.ListenerList.fireOrQueue(ListenerList.java:166)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.events.FPListenerRegistry.fireFPValueChanged(FPListenerRegistry.java:21)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.setFile(FlashProgrammerComposite.java:825)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.setFileHistory(FlashProgrammerComposite.java:854)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createFileSection(FlashProgrammerComposite.java:476)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createFlashSection(FlashProgrammerComposite.java:431)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createDefaultSection(FlashProgrammerComposite.java:420)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createContentSections(FlashProgrammerComposite.java:405)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.setDevices(FlashProgrammerComposite.java:1027)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite$2$2.run(FlashProgrammerComposite.java:240)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:827)
+	at org.eclipse.jface.window.Window.open(Window.java:803)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.ProgrammerCommandHandler.execute(ProgrammerCommandHandler.java:27)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:295)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:252)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:234)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:493)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:486)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:799)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.handleWidgetSelection(HandledContributionItem.java:675)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.access$7(HandledContributionItem.java:659)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem$4.handleEvent(HandledContributionItem.java:592)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+!SESSION 2019-09-09 12:21:16.043 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-09 12:21:27.166
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-09 12:21:27.181
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:41.887
+!MESSAGE Unknown board 'BRD4165B' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:41.899
+!MESSAGE Unknown board 'BRD4171A' in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:42.189
+!MESSAGE Unknown architecture(s) [efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+iar, efr32~family[m]~series[1]~device_configuration[3]~performance[p]~radio[832]~flash[512k]~temp[i]~package[m]~pins[48]+gcc] in framework ble
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:45.059
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app NCP target - Empty
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:45.181
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app NCP - Host
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:45.218
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app SOC - DTM
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:45.298
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Empty - RAIL - DMP
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:45.343
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app SOC - Light - RAIL - DMP
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:45.362
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar] in sample app SOC - Range Test - RAIL - DMP
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:45.379
+!MESSAGE Unknown architecture(s) [rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Range Test - RAIL - DMP - BLE and IEEE802.15.4
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:45.390
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Smart Phone App
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:45.421
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Thermometer
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:45.447
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Thermometer - Client
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:45.474
+!MESSAGE Unknown architecture(s) [efr32mg13p832f512im48+brd4165b+gcc, efr32mg13p832f512im48+brd4165b+iar, rm21z000f1024im32+brd4171a+gcc, rm21z000f1024im32+brd4171a+iar] in sample app SOC - Thermometer - RTOS
+
+!ENTRY com.silabs.ss.platform.rcp.core 2 0 2019-09-09 12:21:45.882
+!MESSAGE Could not find a quiz yaml file: D:\SiliconLabs\developer\sdks\gecko_sdk_suite\v2.6\app\bluetooth\appbuilder\fwk\meta-inf\quizz.yaml
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-09 12:22:06.007
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-09 12:22:30.547
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.rcp.core 4 0 2019-09-09 12:23:30.842
+!MESSAGE exception caught in listener
+!STACK 0
+java.lang.NullPointerException
+	at com.silabs.ss.tool.internal.flashprogrammer.exx32.ui.GroupFactoryFlashOptions.valueChanged(GroupFactoryFlashOptions.java:210)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.events.FPListenerRegistry.lambda$0(FPListenerRegistry.java:21)
+	at com.silabs.java.utils.ListenerList.fire(ListenerList.java:127)
+	at com.silabs.java.utils.ListenerList.fireOrQueue(ListenerList.java:166)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.events.FPListenerRegistry.fireFPValueChanged(FPListenerRegistry.java:21)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.setFile(FlashProgrammerComposite.java:825)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.setFileHistory(FlashProgrammerComposite.java:854)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createFileSection(FlashProgrammerComposite.java:476)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createFlashSection(FlashProgrammerComposite.java:431)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createDefaultSection(FlashProgrammerComposite.java:420)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.createContentSections(FlashProgrammerComposite.java:405)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite.setDevices(FlashProgrammerComposite.java:1027)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.FlashProgrammerComposite$2$2.run(FlashProgrammerComposite.java:240)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:827)
+	at org.eclipse.jface.window.Window.open(Window.java:803)
+	at com.silabs.ss.tool.internal.api.flashprogrammer.ui.ProgrammerCommandHandler.execute(ProgrammerCommandHandler.java:27)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:295)
+	at org.eclipse.ui.internal.handlers.E4HandlerProxy.execute(E4HandlerProxy.java:90)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invokeUsingClass(InjectorImpl.java:252)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.invoke(InjectorImpl.java:234)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.invoke(ContextInjectionFactory.java:132)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceHandler.execute(HandlerServiceHandler.java:152)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:493)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:486)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.executeItem(HandledContributionItem.java:799)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.handleWidgetSelection(HandledContributionItem.java:675)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.access$7(HandledContributionItem.java:659)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem$4.handleEvent(HandledContributionItem.java:592)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4362)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1113)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4180)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3769)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at com.silabs.ss.platform.internal.product.Application.start(Application.java:38)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY com.silabs.ss.tool.flashprogrammer.core 4 0 2019-09-09 12:30:46.680
+!MESSAGE Could not connect debugger.

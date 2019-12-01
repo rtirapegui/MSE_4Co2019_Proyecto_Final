@@ -1,0 +1,13 @@
+<resources>
+  <string name="Start">Iniciar</string>
+  <string name="Pause">Pausar</string>
+  <string name="Reset">Reiniciar</string>
+  <string name="app_name">PlatCDemo</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="home_action_BLEConnect">Conectar a PlatC</string>
+  <string name="home_action_BLEDisconnect">Desconectar de PlatC</string>
+  <string name="app_info_1">"PlatCDemo" compone el Trabajo Final de la Maestría en Sistemas Embebidos de la Universidad de Buenos Aires.</string>
+  <string name="app_info_2">El sistema permite registrar ejercicios físicos y ver todas tus estadísticas de ejercicio, su impacto sobre tu día en conjunto y como va mejorando tu rendimiento.</string>
+  <string name="app_version">Version 1.0</string>
+</resources>

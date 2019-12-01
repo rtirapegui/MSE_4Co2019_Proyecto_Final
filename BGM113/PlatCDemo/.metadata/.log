@@ -1,0 +1,36 @@
+!SESSION 2019-09-03 23:00:16.238 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data D:\TFSProjects\MSE\Bimestre 1\Gestion de la tecnologia y la innovacion\Tesis\Firmware\PlatC\Bluetooth\soc-empty
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-03 23:00:27.543
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-03 23:00:27.559
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-03 23:00:42.555
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-03 23:00:58.342
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+!SESSION 2019-09-03 23:03:36.901 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\MyNotebook\Desktop\Bluetooth\soc-empty
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-03 23:03:48.023
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH) in Python
+
+!ENTRY com.silabs.ss.platform.apack.core 1 0 2019-09-03 23:03:48.039
+!MESSAGE Ignoring path $(env.STUDIO_PYTHON3_PATH)/bin in Python
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-03 23:03:58.234
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp
+
+!ENTRY com.silabs.ss.platform.content.core 4 0 2019-09-03 23:04:17.351
+!MESSAGE Local timestamp file does not exist: D:\SiliconLabs\SimplicityStudio\v4\offline\common\Simplicity_Studio_Terms_of_Use_and_Privacy_Statement.timestamp

@@ -47,7 +47,6 @@
  */
 /* --------------------------------- Notes --------------------------------- */
 /* ----------------------------- Include files ----------------------------- */
-#include "rkh.h"
 #include "bsp.h"
 #include "system.h"
 #include "delay.h"
@@ -66,7 +65,19 @@ static uint32_t volatile g_timeSecCounter = 0;
 
 /* ----------------------- Local function prototypes ----------------------- */
 /* ---------------------------- Local functions ---------------------------- */
-void hwTimerExpiryCb(void)
+static void signalInitStart(void)
+{
+	LED_On(LED_RED_PIN);
+	LED_On(LED_GREEN_PIN);
+	LED_On(LED_BLUE_PIN);
+}
+static void signalInitEnd(void)
+{
+	LED_Off(LED_RED_PIN);
+	LED_Off(LED_GREEN_PIN);
+	LED_Off(LED_BLUE_PIN);
+}
+static void hwTimerExpiryCb(void)
 {
 	/* Invoke rkh tick */
 	RKH_TIM_TICK(0);
@@ -80,7 +91,23 @@ void hwTimerExpiryCb(void)
 
 	common_tc_delay(RKH_TICK_RATE_MS * 1000);
 }
+/* -------------------------- External functions -------------------------- */
+extern int errno;
+extern int _end;
+extern caddr_t _sbrk(int incr)
+{
+	static unsigned char *heap = NULL;
+	unsigned char *prev_heap;
 
+	if (heap == NULL) {
+		heap = (unsigned char *)&_end;
+	}
+	prev_heap = heap;
+
+	heap += incr;
+
+	return (caddr_t) prev_heap;
+}
 /* ---------------------------- Global functions --------------------------- */
 void bsp_init(void)
 {
@@ -90,10 +117,28 @@ void bsp_init(void)
 	/* Initialize delay module */
 	delay_init();
 
-	/* Initialize system tick counter */
-	set_common_tc_expiry_callback(hwTimerExpiryCb);
-	common_tc_init();
-	common_tc_delay(RKH_TICK_RATE_MS * 1000);
+	/* Configure board pins */
+	struct port_config pin_conf;
+	port_get_config_defaults(&pin_conf);
+
+	pin_conf.direction = PORT_PIN_DIR_INPUT;
+	port_pin_set_config(PUSH_BUTTON_PIN, &pin_conf);
+	port_pin_set_config(BATTERY_STATUS_PIN, &pin_conf);
+	port_pin_set_config(BLE_STATUS_PIN, &pin_conf);
+	port_pin_set_config(EXT_WAKE_UP_PIN, &pin_conf);
+	
+	pin_conf.direction = PORT_PIN_DIR_OUTPUT;
+	port_pin_set_config(LED_RED_PIN, &pin_conf);
+	port_pin_set_config(LED_GREEN_PIN, &pin_conf);
+	port_pin_set_config(LED_BLUE_PIN, &pin_conf);
+	port_pin_set_config(BUZZER_PIN, &pin_conf);
+	port_pin_set_config(BLE_RESET_PIN, &pin_conf);
+
+	/* Set initial pin out status */
+	BLE_RESET_SET();
+
+	/* Fire initialization signaling start */
+	signalInitStart();
 
 	/* Initialize emulated eeprom */
 	if(!emu_eeprom_init())
@@ -111,9 +156,21 @@ void bsp_init(void)
 	if(!battery_init())
 		RKH_ERROR();
 
-	/* Initialize battery checker */
+	/* Initialize buzzer */
+	if(!buzzer_init())
+		RKH_ERROR();
+
+	/* Initialize ble module */
 	if(!bgm113_init())
 		RKH_ERROR();
+
+	/* Fire initialization signaling end */
+	signalInitEnd();
+
+	/* Initialize system tick counter */
+	set_common_tc_expiry_callback(hwTimerExpiryCb);
+	common_tc_init();
+	common_tc_delay(RKH_TICK_RATE_MS * 1000);
 
 	/* Initialize RKH state machine scheduler */
 	rkh_fwk_init();
@@ -132,22 +189,12 @@ void bsp_init(void)
 
 	/* Enable global interrupts */
 	RKH_ENA_INTERRUPT();
+
+	/* Set sleep mode to STANDBY */
+	//system_set_sleepmode(SYSTEM_SLEEPMODE_STANDBY);
 }
 rui32_t bsp_getTimeSec(void)
 {
 	return g_timeSecCounter;
 }
-rui8_t bsp_writeEepromData(emu_eeprom_id_t id, const rui8_t *data)
-{
-	return emu_eeprom_writeData(id, data);
-}
-rui8_t bsp_readEepromData(emu_eeprom_id_t id, const rui8_t *data)
-{
-	return emu_eeprom_readData(id, data);
-}
-rbool_t bsp_setMotionThreshold(rui16_t womThreshold)
-{
-	return mpu9250_setMotionThreshold(womThreshold);
-}
-
 /* ------------------------------ End of file ------------------------------ */

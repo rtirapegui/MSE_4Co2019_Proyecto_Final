@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+	android:background="@drawable/wallpaper">
+ 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+		<TableRow
+			android:layout_width="fill_parent"
+			android:weightSum="1"
+			android:visibility="visible"
+			android:background="@drawable/settings_border">
+
+			<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:minWidth="25px"
+				android:minHeight="25px">
+				<TextView
+					android:text="Pitido al detectar repetición"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:layout_marginLeft="10dp"
+					android:textSize="20dp"
+					android:textColor="@android:color/white"
+					android:id="@+id/settings_tv_buzzer_sound" />
+				<ToggleButton
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textOff="No"
+					android:textOn="Si" 
+					android:layout_marginRight="10dp"
+					android:layout_alignParentRight="true"
+					android:id="@+id/settings_tb_buzzer_sound" />
+			</RelativeLayout>
+		</TableRow>
+		<TableRow
+			android:layout_width="fill_parent"
+			android:weightSum="1"
+			android:visibility="visible"
+			android:background="@drawable/settings_border">
+
+			<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:minWidth="25px"
+				android:minHeight="25px">
+				<TextView
+					android:text="Indicaciones por voz"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:layout_marginLeft="10dp"
+					android:textSize="20dp"
+					android:textColor="@android:color/white"
+					android:id="@+id/settings_tv_voice_sound" />
+				<ToggleButton
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textOff="No"
+					android:textOn="Si" 
+					android:layout_marginRight="10dp"
+					android:layout_alignParentRight="true"
+					android:id="@+id/settings_tb_voice_sound" />
+			</RelativeLayout>
+		</TableRow>
+		<TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="0.02"
+			android:background="@drawable/settings_border">
+            
+			<RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+				<TextView
+					android:text="Número de repeticiones rutina"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerHorizontal="true"
+					android:layout_marginTop="5dp"
+					android:layout_marginLeft="10dp"
+					android:textSize="20dp"
+					android:textColor="@android:color/white"
+					android:id="@+id/settings_tv_repetitions_count_title" />
+				<SeekBar
+					android:layout_width="250dp"
+					android:layout_height="wrap_content"
+					android:layout_centerHorizontal="true"
+					android:layout_marginTop="30dp"
+					android:layout_below="@+id/settings_tv_repetitions_count_title"
+					android:id="@+id/settings_sb_repetitions_count" />
+				<TextView
+					android:text="Max."
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_below="@+id/settings_tv_repetitions_count_title"
+					android:layout_marginTop="23dp"
+					android:layout_marginLeft="10dp"
+					android:textSize="20dp"
+					android:textColor="@android:color/white"
+					android:layout_toLeftOf="@+id/settings_sb_repetitions_count"
+					android:id="@+id/settings_tv_repetitions_count_max" />
+				<TextView
+					android:text="--"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_below="@+id/settings_tv_repetitions_count_title"
+					android:layout_marginTop="23dp"
+					android:layout_marginLeft="10dp"
+					android:textSize="20dp"
+					android:textColor="@android:color/white"
+					android:layout_toRightOf="@+id/settings_sb_repetitions_count"
+					android:id="@+id/settings_tv_repetitions_count" />
+            </RelativeLayout>
+			
+
+        </TableRow>
+		<TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="0.8"
+			android:background="@drawable/settings_border">
+        </TableRow>
+		<TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="0"
+			android:background="@drawable/settings_border">
+            
+			<RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+				<Button  
+					android:layout_width="match_parent"  
+					android:layout_height="wrap_content"  
+					android:text="Reestablecer valores por defecto"
+					android:id="@+id/settings_btn_restore_default_values"/>  
+            </RelativeLayout>
+		</TableRow>
+    </TableLayout>
+</LinearLayout>

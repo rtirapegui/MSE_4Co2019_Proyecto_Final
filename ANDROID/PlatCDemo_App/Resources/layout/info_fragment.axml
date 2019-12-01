@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@drawable/wallpaper">
+	
+	<TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+		<TableRow
+			android:layout_width="fill_parent"
+			android:visibility="visible"
+			android:background="@drawable/settings_border">
+
+			<RelativeLayout
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:minWidth="25px"
+				android:minHeight="25px">
+				<TextView
+					android:text="@string/app_info_1"
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:layout_centerHorizontal="true"
+					android:gravity="center"
+					android:paddingTop="5dp"
+					android:singleLine="false"
+					android:textStyle="bold"
+					android:textSize="18dp"
+					android:textColor="@android:color/white"
+					android:id="@+id/info_tv_app_description_1" />
+				<TextView
+					android:text="@string/app_info_2"
+					android:layout_height="wrap_content"
+					android:layout_width="match_parent"
+					android:layout_below="@+id/info_tv_app_description_1"
+					android:layout_centerHorizontal="true"
+					android:gravity="center"
+					android:paddingTop="5dp"
+					android:singleLine="false"
+					android:textStyle="bold"
+					android:textSize="18dp"
+					android:textColor="@android:color/white"
+					android:id="@+id/info_tv_app_description_2" />
+			</RelativeLayout>
+		</TableRow>
+		<TableRow
+            android:layout_width="fill_parent"
+			android:background="@drawable/settings_border">
+            
+			<RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+            </RelativeLayout>
+
+        </TableRow>
+	</TableLayout>
+</LinearLayout>

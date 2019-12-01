@@ -1,2 +1,7 @@
+defaultSelection=\u0000
+disabledIDs=\u0000
 eclipse.preferences.version=1
-lastRefreshDate=1563405403296
+enabledIDs=com.silabs.sdk.stack.btmesh\:1.5.1._1581210859\u0000com.silabs.sdk.stack.super\:2.6.2._1929816918\u0000com.silabs.stack.external.stackless\:1.0.0._1234321\u0000com.silabs.sdk.none\:0.0.0\u0000
+knownPackageIds=
+lastRefreshDate=1567891513252
+manualDescriptors=<?xml version\="1.0" encoding\="ASCII"?>\r\n<model\:MDescriptors xmlns\:model\="http\://www.silabs.com/ss/Studio.ecore"/>\r\n

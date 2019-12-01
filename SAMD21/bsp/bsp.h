@@ -55,9 +55,10 @@
 #include "mpu9250.h"
 #include "push_button.h"
 #include "battery.h"
+#include "buzzer.h"
 #include "bgm113.h"
+#include "bgm113_cmds_parser.h"
 #include "platCbsp.h"
-
 /* ---------------------- External C language linkage ---------------------- */
 #ifdef __cplusplus
 extern "C" {
@@ -70,17 +71,22 @@ extern "C" {
 /* -------------------------- Function prototypes -------------------------- */
 void bsp_init(void);
 rui32_t bsp_getTimeSec(void);
-rui8_t bsp_writeEepromData(emu_eeprom_id_t id, const rui8_t *data);
-rui8_t bsp_readEepromData(emu_eeprom_id_t id, const rui8_t *data);
-rbool_t bsp_setMotionThreshold(rui16_t womThreshold);
 
-#define bsp_registerBatteryCb(x)		battery_registerCb(x);
-#define bsp_registerAccelCb(x)			mpu9250_registerCb(x);
-#define bsp_registerBleCb(x)			bgm113_registerCb(x);
-#define bsp_startBleAdvertisement()		bgm113_startAdvertising();
-#define bsp_stopBleAdvertisement()		bgm113_stopAdvertising();
+#define bsp_buzzerOn()					buzzer_On()
+#define bsp_buzzerOff()					buzzer_Off()				
+#define bsp_writeEepromData(x,y)		emu_eeprom_writeData(x,y)
+#define bsp_readEepromData(x,y)			emu_eeprom_readData(x,y)
+#define bsp_registerBatteryCb(x)		battery_registerCb(x)
+#define bsp_registerPushButtonCb(x)		push_button_registerCb(x)
+#define bsp_getMotionData()				mpu9250_getData()
+#define bsp_registerBleCb(x)			bgm113_registerCb(x)
+#define bsp_startBleAdvertisement()		bgm113_startAdvertising()
+#define bsp_stopBleAdvertisement()		bgm113_stopAdvertising()
+#define bsp_processBleIncomingData(x)	bgm113_cmds_parser_processIncomingDataTask(x)
+#define bsp_sendBleData(x)				bgm113_cmds_parser_sendData(x)
 
 /* -------------------- External C language linkage end -------------------- */
+
 #ifdef __cplusplus
 }
 #endif

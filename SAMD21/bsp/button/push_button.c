@@ -79,10 +79,11 @@
 	 /* Configure external interrupt */
 	 extint_chan_get_config_defaults(&extint_config);
 
-	 extint_config.gpio_pin           = PUSH_BUTTON_IRQ_PIN;
-	 extint_config.gpio_pin_mux       = PUSH_BUTTON_IRQ_MUX;
-	 extint_config.gpio_pin_pull      = EXTINT_PULL_NONE;
-	 extint_config.detection_criteria = EXTINT_DETECT_BOTH;
+	 extint_config.gpio_pin            = PUSH_BUTTON_IRQ_PIN;
+	 extint_config.gpio_pin_mux        = PUSH_BUTTON_IRQ_MUX;
+	 extint_config.gpio_pin_pull       = EXTINT_PULL_NONE;
+	 extint_config.detection_criteria  = EXTINT_DETECT_BOTH;
+	 extint_config.filter_input_signal = true;
 
 	 extint_chan_set_config(PUSH_BUTTON_IRQ_LINE, &extint_config);
 

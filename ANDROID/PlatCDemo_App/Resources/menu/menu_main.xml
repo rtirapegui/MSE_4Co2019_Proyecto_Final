@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/home_action_BLEConnect"
+        android:orderInCategory="100"
+        android:title="@string/home_action_BLEConnect"
+        app:showAsAction="never" />
+  <item
+        android:id="@+id/home_action_BLEDisconnect"
+        android:orderInCategory="100"
+        android:title="@string/home_action_BLEDisconnect"
+        app:showAsAction="never" />
+</menu>

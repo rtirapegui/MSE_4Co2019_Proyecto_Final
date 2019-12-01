@@ -1,0 +1,11 @@
+protectFromDetectionUpdates=false
+label=J-Link EDU (268003505)
+targetPartOverride=mcu.arm.efr32.bg1.bgm113a256v2
+boardOverrides {
+  brd4301a:0.0.0.A01
+}
+EXTENSION:com.silabs.ss.support.mcu.internal.api.part.core.MCUDeviceSettingExtension {
+  tifId:swd
+}
+EXTENSION:com.silabs.ss.support.jlink.internal.api.core.JLinkDeviceSettingsExtension {
+}

@@ -58,8 +58,13 @@ extern "C" {
 
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
+#define ADVERTISE_NAME_SIZE_MAX		20
+#define MOTION_THRESHOLD_MAX		1020	
+#define MOTION_THRESHOLD_MIN		40
+
+#define ADVERTISE_NAME_DEFAULT		"PlatC"
 #define MOTION_THRESHOLD_DEFAULT	952				// in mg
-#define BUZZER_ENABLED_DEFAULT		false
+#define BUZZER_ENABLED_DEFAULT		true
 #define MOTION_LED_PIN				LED_RED_PIN
 #define BATTERY_LED_PIN				LED_GREEN_PIN	
 #define BLE_LED_PIN					LED_BLUE_PIN

@@ -54,8 +54,8 @@
 
  /* ----------------------------- Local macros ------------------------------ */
  /* ------------------------------- Constants ------------------------------- */
- #define BLE_RESET_INTERVAL	500	// In ms
- /* ---------------------------- Local variables ---------------------------- */
+ #define BLE_RESET_INTERVAL	100	// In ms
+  /* ---------------------------- Local variables ---------------------------- */
  
  /* User IRQ callback */
  static bgm113_IRQCb g_userCb;
@@ -78,17 +78,22 @@
  {
 	struct extint_chan_conf extint_config;
 
+	 /* Initialize cmds parser */
+	 if(!bgm113_cmds_parser_init())
+		return false;
+
 	 /* Configure external interrupt */
 	 extint_chan_get_config_defaults(&extint_config);
 
-	 extint_config.gpio_pin           = BLE_STATUS_IRQ_PIN;
-	 extint_config.gpio_pin_mux       = BLE_STATUS_IRQ_MUX;
-	 extint_config.gpio_pin_pull      = EXTINT_PULL_NONE;
-	 extint_config.detection_criteria = EXTINT_DETECT_BOTH;
+	 extint_config.gpio_pin            = BLE_STATUS_IRQ_PIN;
+	 extint_config.gpio_pin_mux        = BLE_STATUS_IRQ_MUX;
+	 extint_config.gpio_pin_pull       = EXTINT_PULL_UP;
+	 extint_config.detection_criteria  = EXTINT_DETECT_BOTH;
+	 extint_config.filter_input_signal = true;
 
 	 extint_chan_set_config(BLE_STATUS_IRQ_LINE, &extint_config);
-
-	 /* Configure external interrupt callback */
+	 
+	 /* Register external interrupt callback */
 	 extint_register_callback(BGM113_IRQCb, BLE_STATUS_IRQ_LINE, EXTINT_CALLBACK_TYPE_DETECT);
 
 	 /* Enable external interrupt callback */

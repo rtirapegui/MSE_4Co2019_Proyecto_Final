@@ -5,7 +5,7 @@
     <ProjectVersion>7.0</ProjectVersion>
     <ToolchainName>com.Atmel.ARMGCC.C</ToolchainName>
     <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
-    <avrdevice>ATSAMD21J18A</avrdevice>
+    <avrdevice>ATSAMD21E17A</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
     <Language>C</Language>
@@ -25,7 +25,7 @@
     <preserveEEPROM>true</preserveEEPROM>
     <OverrideVtorValue>exception_table</OverrideVtorValue>
     <BootSegment>2</BootSegment>
-    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <eraseonlaunchrule>4</eraseonlaunchrule>
     <AsfFrameworkConfig>
       <framework-data>
         <options />
@@ -40,6 +40,57 @@
     </AsfFrameworkConfig>
     <ResetRule>0</ResetRule>
     <EraseKey />
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolserialnumber>J41800087861</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1001030B</avrdeviceexpectedsignature>
+    <avrtoolinterface>SWD</avrtoolinterface>
+    <com_atmel_avrdbg_tool_edbg>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>2000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.edbg</ToolType>
+      <ToolNumber>ATML2130021800024469</ToolNumber>
+      <ToolName>EDBG MSD</ToolName>
+    </com_atmel_avrdbg_tool_edbg>
+    <avrtoolinterfaceclock>2000000</avrtoolinterfaceclock>
+    <com_atmel_avrdbg_tool_samice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>0</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.samice</ToolType>
+      <ToolNumber>268003505</ToolNumber>
+      <ToolName>J-Link</ToolName>
+    </com_atmel_avrdbg_tool_samice>
+    <custom>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>4000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>
+        </InterfaceName>
+      </ToolOptions>
+      <ToolType>custom</ToolType>
+      <ToolNumber>
+      </ToolNumber>
+      <ToolName>Custom Programming Tool</ToolName>
+    </custom>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>2000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800087861</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -74,7 +125,7 @@
     </ListValues>
   </armgcc.linker.libraries.LibrarySearchPaths>
   <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
-  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd21j18a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Tsamd21e17a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
   <armgcc.assembler.general.IncludePaths>
     <ListValues>
       <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
@@ -101,11 +152,12 @@
   <armgcc.compiler.symbols.DefSymbols>
     <ListValues>
       <Value>DEBUG</Value>
-      <Value>__SAMD21J18A__</Value>
+      <Value>__SAMD21E17A__</Value>
       <Value>__ASF_AS_3_46_0__</Value>
       <Value>CYCLE_MODE</Value>
       <Value>EXTINT_CALLBACK_MODE=true</Value>
       <Value>TC_ASYNC=true</Value>
+      <Value>ARM_MATH_CM0PLUS</Value>
     </ListValues>
   </armgcc.compiler.symbols.DefSymbols>
   <armgcc.compiler.directories.IncludePaths>
@@ -119,6 +171,7 @@
       <Value>../../../../../bsp/button</Value>
       <Value>../../../../../bsp/bgm113</Value>
       <Value>../../../../../bsp/battery</Value>
+      <Value>../../../../../bsp/buzzer</Value>
       <Value>../../../../../third-party/asf3.46.0/drivers/sam0/adc</Value>
       <Value>../../../../../third-party/asf3.46.0/drivers/sam0/adc/adc_sam_d_r_h</Value>
       <Value>../../../../../third-party/asf3.46.0/drivers/sam0/port</Value>
@@ -142,6 +195,8 @@
       <Value>../../../../../third-party/asf3.46.0/drivers/sam0/eeprom</Value>
       <Value>../../../../../third-party/asf3.46.0/drivers/sam0/system/timer</Value>
       <Value>../../../../../third-party/asf3.46.0/drivers/sam0/system/timer/tc</Value>
+      <Value>../../../../../third-party/asf3.46.0/drivers/sam0/ring_buffer</Value>
+      <Value>../../../../../third-party/asf3.46.0/drivers/sam0/tcc</Value>
       <Value>../../../../../third-party/asf3.46.0/devices/common/utils</Value>
       <Value>../../../../../third-party/asf3.46.0/devices/common/utils/interrupt</Value>
       <Value>../../../../../third-party/asf3.46.0/devices/sam0/samd21</Value>
@@ -162,6 +217,9 @@
       <Value>../../../../../third-party/rkh/source/tmr/inc</Value>
       <Value>../../../../../third-party/rkh/source/trc/inc</Value>
       <Value>../../../../../third-party/asf3.46.0/CMSIS/Include</Value>
+      <Value>../../../../../third-party/json</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.3.304\samd21a\include</Value>
     </ListValues>
   </armgcc.compiler.directories.IncludePaths>
   <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
@@ -171,28 +229,33 @@
   <armgcc.linker.libraries.Libraries>
     <ListValues>
       <Value>libarm_cortexM0l_math</Value>
-      <Value>libm</Value>
       <Value>libsam0_lib_hw_timer.a</Value>
+      <Value>libm</Value>
     </ListValues>
   </armgcc.linker.libraries.Libraries>
   <armgcc.linker.libraries.LibrarySearchPaths>
     <ListValues>
-      <Value>../../../../../third-party/asf3.46.0/CMSIS/Lib/GCC</Value>
-      <Value>../../../../../third-party/asf3.46.0/drivers/sam0/system/timer</Value>
+      <Value>..\..\..\..\..\third-party\asf3.46.0\CMSIS\Lib\GCC</Value>
+      <Value>..\..\..\..\..\third-party\asf3.46.0\drivers\sam0\system\timer</Value>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
     </ListValues>
   </armgcc.linker.libraries.LibrarySearchPaths>
   <armgcc.linker.optimization.GarbageCollectUnusedSections>True</armgcc.linker.optimization.GarbageCollectUnusedSections>
   <armgcc.linker.memorysettings.ExternalRAM />
-  <armgcc.linker.miscellaneous.LinkerFlags>-Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../../../../../third-party/asf3.46.0/devices/sam0/samd21/linker_scripts/samd21j18a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
+  <armgcc.linker.miscellaneous.LinkerFlags>-Wl,--entry=Reset_Handler -Wl,--cref -mthumb -T../../../../../third-party/asf3.46.0/devices/sam0/samd21/linker_scripts/samd21e17a_flash.ld</armgcc.linker.miscellaneous.LinkerFlags>
   <armgcc.assembler.general.IncludePaths>
     <ListValues>
       <Value>../../../../../third-party/asf3.46.0/CMSIS/Include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.3.304\samd21a\include</Value>
     </ListValues>
   </armgcc.assembler.general.IncludePaths>
   <armgcc.assembler.debugging.DebugLevel>Default (-g)</armgcc.assembler.debugging.DebugLevel>
   <armgcc.preprocessingassembler.general.IncludePaths>
     <ListValues>
       <Value>../../../../../third-party/asf3.46.0/CMSIS/Include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\5.0.1\CMSIS\Include\</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.3.304\samd21a\include</Value>
     </ListValues>
   </armgcc.preprocessingassembler.general.IncludePaths>
   <armgcc.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcc.preprocessingassembler.debugging.DebugLevel>
@@ -219,6 +282,22 @@
     <Compile Include="..\..\..\..\bsp\bgm113\bgm113.h">
       <SubType>compile</SubType>
       <Link>source\bsp\bgm113\bgm113.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\bsp\bgm113\bgm113_cmds_parser.c">
+      <SubType>compile</SubType>
+      <Link>source\bsp\bgm113\bgm113_cmds_parser.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\bsp\bgm113\bgm113_cmds_parser.h">
+      <SubType>compile</SubType>
+      <Link>source\bsp\bgm113\bgm113_cmds_parser.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\bsp\bgm113\uart0.c">
+      <SubType>compile</SubType>
+      <Link>source\bsp\bgm113\uart0.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\bsp\bgm113\uart0.h">
+      <SubType>compile</SubType>
+      <Link>source\bsp\bgm113\uart0.h</Link>
     </Compile>
     <Compile Include="..\..\..\..\bsp\board\platVersionC\conf_clocks.h">
       <SubType>compile</SubType>
@@ -259,6 +338,14 @@
     <Compile Include="..\..\..\..\bsp\button\push_button.h">
       <SubType>compile</SubType>
       <Link>source\bsp\button\push_button.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\bsp\buzzer\buzzer.c">
+      <SubType>compile</SubType>
+      <Link>source\bsp\buzzer\buzzer.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\bsp\buzzer\buzzer.h">
+      <SubType>compile</SubType>
+      <Link>source\bsp\buzzer\buzzer.h</Link>
     </Compile>
     <Compile Include="..\..\..\..\bsp\eeprom\emu_eeprom.c">
       <SubType>compile</SubType>
@@ -355,6 +442,10 @@
     <Compile Include="..\..\..\..\third-party\asf3.46.0\drivers\sam0\port\port.h">
       <SubType>compile</SubType>
       <Link>third-party\asf\drivers\port\port.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\third-party\asf3.46.0\drivers\sam0\ring_buffer\ring_buffer.h">
+      <SubType>compile</SubType>
+      <Link>third-party\asf\drivers\ring_buffer\ring_buffer.h</Link>
     </Compile>
     <Compile Include="..\..\..\..\third-party\asf3.46.0\drivers\sam0\sercom\i2c\i2c_common.h">
       <SubType>compile</SubType>
@@ -476,6 +567,14 @@
       <SubType>compile</SubType>
       <Link>third-party\asf\drivers\system\timer\tc\tc_interrupt.h</Link>
     </Compile>
+    <Compile Include="..\..\..\..\third-party\asf3.46.0\drivers\sam0\tcc\tcc.c">
+      <SubType>compile</SubType>
+      <Link>third-party\asf\drivers\tcc\tcc.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\third-party\asf3.46.0\drivers\sam0\tcc\tcc.h">
+      <SubType>compile</SubType>
+      <Link>third-party\asf\drivers\tcc\tcc.h</Link>
+    </Compile>
     <Compile Include="..\..\..\..\third-party\asf3.46.0\utilities\interrupt.h">
       <SubType>compile</SubType>
       <Link>third-party\asf\drivers\system\interrupt\common\interrupt.h</Link>
@@ -488,9 +587,21 @@
       <SubType>compile</SubType>
       <Link>third-party\asf\drivers\system\interrupt\common\interrupt_sam_nvic.h</Link>
     </Compile>
-    <Compile Include="..\..\..\platC\conf_app.h">
+    <Compile Include="..\..\..\..\third-party\json\jRead.c">
       <SubType>compile</SubType>
-      <Link>source\app\platC\conf_app.h</Link>
+      <Link>third-party\json\jRead.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\third-party\json\jRead.h">
+      <SubType>compile</SubType>
+      <Link>third-party\json\jRead.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\third-party\json\jWrite.c">
+      <SubType>compile</SubType>
+      <Link>third-party\json\jWrite.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\third-party\json\jWrite.h">
+      <SubType>compile</SubType>
+      <Link>third-party\json\jWrite.h</Link>
     </Compile>
     <Compile Include="..\..\..\platC\platC.c">
       <SubType>compile</SubType>
@@ -688,6 +799,22 @@
       <SubType>compile</SubType>
       <Link>source\app\main.c</Link>
     </Compile>
+    <Compile Include="..\..\..\platC\platC_cmds.c">
+      <SubType>compile</SubType>
+      <Link>source\app\platC\platC_cmds.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\platC\platC_cmds.h">
+      <SubType>compile</SubType>
+      <Link>source\app\platC\platC_cmds.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\platC\platC_cmds_handlers.c">
+      <SubType>compile</SubType>
+      <Link>source\app\platC\platC_cmds_handlers.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\platC\platC_cmds_handlers.h">
+      <SubType>compile</SubType>
+      <Link>source\app\platC\platC_cmds_handlers.h</Link>
+    </Compile>
     <Compile Include="..\..\..\rkhcfg.h">
       <SubType>compile</SubType>
       <Link>source\app\rkhcfg.h</Link>
@@ -702,6 +829,7 @@
     <Folder Include="source\bsp\button" />
     <Folder Include="source\bsp\bgm113" />
     <Folder Include="source\bsp\battery" />
+    <Folder Include="source\bsp\buzzer" />
     <Folder Include="third-party" />
     <Folder Include="source" />
     <Folder Include="source\app" />
@@ -715,6 +843,8 @@
     <Folder Include="third-party\asf\drivers\delay" />
     <Folder Include="third-party\asf\drivers\extint" />
     <Folder Include="third-party\asf\drivers\eeprom" />
+    <Folder Include="third-party\asf\drivers\tcc" />
+    <Folder Include="third-party\asf\drivers\ring_buffer" />
     <Folder Include="third-party\asf\drivers\nvm" />
     <Folder Include="third-party\asf\drivers\sercom\i2c" />
     <Folder Include="third-party\asf\drivers\sercom\usart" />
@@ -729,6 +859,7 @@
     <Folder Include="third-party\asf\drivers\system\reset" />
     <Folder Include="third-party\asf\drivers\system\pinmux" />
     <Folder Include="third-party\asf\drivers\system\timer\tc" />
+    <Folder Include="third-party\json" />
     <Folder Include="third-party\rkh" />
     <Folder Include="third-party\rkh\include" />
   </ItemGroup>

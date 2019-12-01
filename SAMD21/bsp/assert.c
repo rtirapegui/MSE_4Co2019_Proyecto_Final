@@ -49,11 +49,14 @@
 /* ----------------------------- Include files ----------------------------- */
 #include "rkh.h"
 #include "reset.h"
+#include "delay.h"
+#include "platCbsp.h"
 
 RKH_THIS_MODULE
 
 /* ----------------------------- Local macros ------------------------------ */
 /* ------------------------------- Constants ------------------------------- */
+#define ASSERT_DELAY		500		// In ms
 /* ---------------------------- Local data types --------------------------- */
 /* ---------------------------- Global variables --------------------------- */
 /* ---------------------------- Local variables ---------------------------- */
@@ -63,11 +66,23 @@ RKH_THIS_MODULE
 void rkh_assert(RKHROM char * const file, int line)
 {
 	(void)line;
+	(void)file;
 
 	RKH_DIS_INTERRUPT();
 	RKH_TR_FWK_ASSERT( (RKHROM char *)file, __LINE__ );
 	rkh_fwk_exit();
-	system_reset();
-}
 
+	/* Toggle leds every ASSERT_DELAY to indicate failure */
+	LED_On(LED_RED_PIN);
+	LED_On(LED_GREEN_PIN);
+	LED_On(LED_BLUE_PIN);
+	
+	while(1)
+	{
+		LED_Toggle(LED_RED_PIN);
+		LED_Toggle(LED_GREEN_PIN);
+		LED_Toggle(LED_BLUE_PIN);
+		delay_ms(ASSERT_DELAY);
+	}
+}
 /* ------------------------------ End of file ------------------------------ */
